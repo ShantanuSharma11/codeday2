@@ -6,8 +6,8 @@
 .main1
 {
     background: url("images/image1.jpg");
-    background-repeat: no-repeat;
     background-size: cover;
+    
 }
 header {
   display: flex;
@@ -113,114 +113,128 @@ header ul li:hover {
 
 /* Social Bar */
 .social-bar {
-  position: absolute;
-  top: 250px;
-  left: 20px;
-  transform: translateY(-50%);
-  background: linear-gradient(180deg, #3b2b1a, #2a1a0f);
-  padding: 20px 10px;
-  border-radius: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-
-
-
-width: 62px;
-height: 190px;
-margin-top: 654px;
-margin-left: 121.82px;
-border-radius: 20px;
-opacity: 1;
-border-width: 1px;
-
-}
-
-/* Icons */
-.social-bar a {
-  color: white;
-  font-size: 20px;
-  text-decoration: none;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-bar a:hover {
-  color: #2196f3;
-  transform: scale(1.2);
-}
-
-.three-sections {
       display: flex;
-      justify-content: flex-end;
-      
+      width: fit-content;
+      margin-left: 10%;
+      flex-direction: column;
       align-items: center;
-      /* margin-left: 45%; */
-      gap: 0px;
-      padding-right: 80px;
-      
+      justify-content: flex-star;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 15px 10px;
+      border-radius: 40px;
+      gap: 15px;
     }
 
-    .card {
-      width: 250px;
-      height: 250px;
-      margin-bottom: 50px;
-      border-radius: 20px;
+    /* Social Icons */
+    .social-bar a {
       color: white;
+      font-size: 20px;
+      text-decoration: none;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social-bar a:hover {
+      transform: scale(1.2);
+      color: #1da1f2; /* blue tint when hover */
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .social-bar {
+        flex-direction: row;
+        border-radius: 20px;
+        padding: 10px 20px;
+      }
+    }
+
+
+
+.three-section-wrapper {
+      justify-content: flex-end;
+      padding:50px;
+      display: flex;
+      align-items: stretch;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    /* Left & Right Cards */
+    .uiux-card {
+      width: 260px;
       padding: 30px 20px;
+      color: white;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       background-size: cover;
       background-position: center;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
     }
 
-    .card h2 {
-      font-size: 22px;
+    .uiux-left {
+      background-image: url("images/Rectangle2.png"); /* <-- Left panel image */
+    }
+
+    .uiux-right {
+      background-image: url("images/Rectangle1.png"); /* <-- Right panel image */
+    }
+
+    .uiux-card h2 {
+      font-size: 18px;
+      font-weight: 700;
       margin-bottom: 15px;
     }
 
-    .card ul {
+    .uiux-card ul {
       list-style: none;
-      margin-bottom: 20px;
     }
 
-    .card ul li {
+    .uiux-card ul li {
       margin: 8px 0;
+      font-size: 14px;
+      opacity: 0.9;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 10px 10px;
-      background: rgba(255,255,255,0.9);
-      color: black;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
+    .uiux-card .bottom-text {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      margin-top: 15px;
     }
 
-    .btn:hover {
-      background: black;
+    .uiux-card .bottom-text button {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      border: none;
+      background: rgba(255, 255, 255, 0.2);
       color: white;
+      font-size: 20px;
+      cursor: pointer;
     }
 
-    /* Background placeholders */
-    .left {
-      background-image: url("images/Rectangle2.png");
+    /* Middle Image */
+    .middle-image {
+      width: 180px;
+      position: relative;
+      
       
     }
-    .middle {
-      background-image: url("images/boy.jpg");
-      border-radius: 20% 10% 10% 20%; /* unique shape */
-    }
-    .right {
-      background-image: url("images/Rectangle1.png");
-    }
 
+    .middle-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      clip-path: polygon(
+     25% 0%,   /* top-left */
+     75% 0%,   /* top-right */
+     100% 50%, /* right-middle */
+     75% 100%, /* bottom-right */
+     25% 100%, /* bottom-left */
+     0% 50%    /* left-middle */
+);
+    }
 
 
     /* day 2 css */
